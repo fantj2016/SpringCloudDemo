@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.laojiao</groupId>
+	<artifactId>fantj-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>../fantj-consumer-movie</module>
+		<module>../fantj-provider-user</module>
+		<module>../fantj-discovery-eureka</module>
+		<module>../fantj-discovery-eureka-ha</module>
+		<module>../fantj-consumer-movie-ribbon</module>
+		<module>../fantj-consumer-movie-ribbon-properties</module>
+		<module>../fantj-consumer-movie-feign</module>
+		<module>../fantj-consumer-movie-ribbon-hystrix</module>
+		<module>../fantj-consumer-movie-ribbon-hystrix-propergation</module>
+		<module>../fantj-consumer-movie-feign-hystrix</module>
+		<module>../fantj-consumer-movie-feign-hystrix-factory</module>
+		<module>../fantj-discovery-hystrix-dashboard</module>
+		<module>../fantj-discovery-hystrix-turbine</module>
+		<module>../fantj-discovery-gateway-zuul</module>
+		<module>../fantj-discovery-gateway-zuul-regex</module>
+		<module>../fantj-file-upload</module>
+		<module>../fantj-discovery-gateway-zuul-fallback</module>
+		<module>../fantj-discovery-gateway-zuul-filter</module>
+		<module>../fantj-springcloud-config-server</module>
+		<module>../fantj-springcloud-config-client</module>
+
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.1.RELEASE</version>
+	</parent>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Camden.SR1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

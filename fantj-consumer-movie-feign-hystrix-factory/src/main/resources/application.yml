@@ -1,0 +1,16 @@
+server:
+  port: 7901
+spring:
+  application:
+    name: consumer-movie-feign-hystrix-factory
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+hystrix:
+  metrics:
+    polling-interval-ms: 60000

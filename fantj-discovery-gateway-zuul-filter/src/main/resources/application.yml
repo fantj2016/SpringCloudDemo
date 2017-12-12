@@ -1,0 +1,32 @@
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
+#加入密码验证
+security:
+  basic:
+    enabled: true
+  user:
+    name: laojiao
+    password: laojiao
+spring:
+  application:
+    name: gateway-zuul
+#zuul:
+#  routes:
+#    provider-user3: /user
+
+zuul:
+  routes:
+    users:
+      path: /user/**
+      serviceId: provider-user3
+ribbon:
+  eureka:
+    enabled: false
+
+provider-user3:
+  ribbon:
+    listOfServers: http://127.0.0.1:7904,http://127.0.0.1:7902

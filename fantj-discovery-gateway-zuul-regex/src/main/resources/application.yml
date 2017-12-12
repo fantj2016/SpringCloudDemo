@@ -1,0 +1,10 @@
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
+
+spring:
+  application:
+    name: gateway-zuul-regex

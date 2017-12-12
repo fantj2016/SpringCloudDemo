@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: consumer-movie-ribbon-properties
+server:
+  port: 8011
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
+  instance:
+    prefer-ip-address: true
+provider-user:  #微服务id
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule  #Rule，这个是权重响应事件Rule

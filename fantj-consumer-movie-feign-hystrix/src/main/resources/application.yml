@@ -1,0 +1,11 @@
+server:
+  port: 7901
+spring:
+  application:
+    name: consumer-movie
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
+

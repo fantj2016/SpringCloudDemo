@@ -1,0 +1,20 @@
+server:
+  port: 8041
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
+#加入密码验证
+security:
+  basic:
+    enabled: true
+  user:
+    name: laojiao
+    password: laojiao
+spring:
+  application:
+    name: gateway-zuul-fallback
+zuul:
+  routes:
+    provider-user3: /user
+

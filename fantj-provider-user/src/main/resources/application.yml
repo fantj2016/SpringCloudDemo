@@ -1,0 +1,36 @@
+server:
+#  port: 7900
+  port: 7902
+#  port: 7904
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://127.0.0.1/springcloud??characterEncoding=UTF8&useSSL=true&allowMultiQueries=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: provider-user3
+#    schema: classpath:schema.sql   #����
+#    data: classpath:data.sql #����
+logging:
+  level: info
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://127.0.0.1:9000/eureka
+  instance:
+    prefer-ip-address: true  #将主机名改成ip(192.168.0.1)
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id}:${server.port}
+
+
+
+#    root: info
+#    org.hibernate: info
+#    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+#    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+#    com.fantj: DEBUG
