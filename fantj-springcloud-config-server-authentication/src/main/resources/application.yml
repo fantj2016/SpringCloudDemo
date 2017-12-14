@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jiaofanting/spring-cloud-config-repo/
+server:
+  port: 8080
+security:
+  user:
+    name: user
+    password: user

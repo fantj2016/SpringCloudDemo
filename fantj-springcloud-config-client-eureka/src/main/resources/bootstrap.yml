@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server-eureka
+  application:
+    name: config-client-eureka
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://127.0.0.1:9000/eureka

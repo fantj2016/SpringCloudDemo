@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      uri: http://user:user@127.0.0.1:8080
+      profile: dev
+      label: master
+  application:
+    name: spring-cloud-config-client

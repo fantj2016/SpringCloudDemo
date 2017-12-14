@@ -29,6 +29,11 @@
 		<module>../fantj-discovery-gateway-zuul-filter</module>
 		<module>../fantj-springcloud-config-server</module>
 		<module>../fantj-springcloud-config-client</module>
+		<module>../fantj-springcloud-config-server-authentication</module>
+		<module>../fantj-springcloud-config-client-authentication</module>
+		<module>../fantj-springcloud-config-server-eureka</module>
+		<module>../fantj-springcloud-config-client-eureka</module>
+		<module>../fantj-springcloud-config-client-refresh</module>
 
 	</modules>
 
